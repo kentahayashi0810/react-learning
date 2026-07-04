@@ -12,7 +12,7 @@
 - Allowing myself to use AI for learning, only for the purpose of deepening my understanding
 - Prioritize googling over asking AI (Saves water!)
 - It is okay to forget, come back to it when that happens.
-- 
+- Will keep logging my learning progress in learning-log.md
 
 ## Learning Goal
 - Can build React App from scratch
