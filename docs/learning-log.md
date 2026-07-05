@@ -6,6 +6,11 @@
 - Things I had trouble understanding
 - Summary
 
+---
+
+### 7/6
+- Reviewd JavaScript
+-
 
 ### 7/5
 - Installed recommended extensions
