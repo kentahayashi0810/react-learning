@@ -12,7 +12,7 @@
 ### 7/6
 
 - Reviewd JavaScript: Arrow function, ES Module, callback function, debugger, DOM, rest parameter, map,filter, spread syntax, xonditional operator, Promise, async/await
--
+  -React setup, components
 
 ### 7/5
 
