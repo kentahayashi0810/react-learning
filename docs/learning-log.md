@@ -9,6 +9,10 @@
 
 ---
 
+### 7/8
+
+- React setup, components
+
 ### 7/6
 
 - Reviewd JavaScript: Arrow function, ES Module, callback function, debugger, DOM, rest parameter, map,filter, spread syntax, xonditional operator, Promise, async/await
