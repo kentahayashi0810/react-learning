@@ -9,6 +9,10 @@
 
 ---
 
+### 7/9
+
+- Fragment, props, JSX, the difference between expression and statement
+
 ### 7/8
 
 - React setup, components
