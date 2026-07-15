@@ -20,14 +20,14 @@ const Example = () => {
         <h1>Hello!</h1>
         <h2>Good to see you.</h2>
       </div>
-    ).props
+    ).props,
   );
 
   return React.createElement(
     "div",
     null,
     React.createElement("h1", null, "Hello!"),
-    React.createElement("h2", null, "Good to see you.")
+    React.createElement("h2", null, "Good to see you."),
   );
 };
 

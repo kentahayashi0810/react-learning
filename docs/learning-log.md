@@ -9,6 +9,10 @@
 
 ---
 
+### 7/15
+
+-deep about JSX, events
+
 ### 7/9
 
 - Fragment, props, JSX, the difference between expression and statement
