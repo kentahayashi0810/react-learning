@@ -9,6 +9,10 @@
 
 ---
 
+### 7/19
+
+- React hooks, state, rendering, passing down states
+
 ### 7/15
 
 -deep about JSX, events
