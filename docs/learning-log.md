@@ -9,6 +9,14 @@
 
 ---
 
+### 7/21
+
+- Form elements,
+
+### 7/20
+
+- array methods, key,
+
 ### 7/19
 
 - React hooks, state, rendering, passing down states
