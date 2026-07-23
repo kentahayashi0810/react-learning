@@ -9,6 +9,10 @@
 
 ---
 
+### 7/23
+
+- todo app challenge, needs refactoring
+
 ### 7/22
 
 - form, pulldown, multi checkbox
