@@ -1,5 +1,17 @@
-const Form = ({ todoInputState, addTodo }) => {
-  const [todoInput, setTodoInput] = todoInputState;
+import { useState } from "react";
+import { nanoid } from "nanoid";
+
+const Form = ({ createTodo }) => {
+  const [todoInput, setTodoInput] = useState("");
+
+  const addTodo = () => {
+    const newTodo = {
+      id: nanoid(),
+      content: todoInput,
+    };
+    createTodo(newTodo);
+    setTodoInput("");
+  };
 
   return (
     <>

@@ -19,8 +19,6 @@ const Todo = () => {
   ];
 
   const [todos, setTodos] = useState(todosList);
-  const [todoInput, setTodoInput] = useState("");
-  const [todoItemCounter, setTodoItemCounter] = useState(todos.length + 1);
 
   const deleteTodo = (id) => {
     setTodos((prev) => {
@@ -31,26 +29,14 @@ const Todo = () => {
     });
   };
 
-  const addTodo = () => {
-    setTodos((prev) => {
-      const newtodos = prev.map((todo) => ({ ...todo }));
-      const newTodo = {
-        id: todoItemCounter,
-        content: todoInput,
-      };
-      newtodos.push(newTodo);
-
-      return newtodos;
-    });
-
-    setTodoInput("");
-    setTodoItemCounter((prev) => prev + 1);
+  const createTodo = (todo) => {
+    setTodos([...todos, todo]);
   };
 
   return (
     <>
       <List todos={todos} deleteTodo={deleteTodo} />
-      <Form todoInputState={[todoInput, setTodoInput]} addTodo={addTodo} />
+      <Form createTodo={createTodo} />
     </>
   );
 };
