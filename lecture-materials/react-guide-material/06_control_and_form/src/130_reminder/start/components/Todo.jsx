@@ -1,4 +1,6 @@
 import { useState } from "react";
+import List from "./List";
+import Form from "./Form";
 
 const Todo = () => {
   const todosList = [
@@ -18,7 +20,7 @@ const Todo = () => {
 
   const [todos, setTodos] = useState(todosList);
   const [todoInput, setTodoInput] = useState("");
-  const [todoItemCounter, setTodoItemCounter] = useState(todos.length);
+  const [todoItemCounter, setTodoItemCounter] = useState(todos.length + 1);
 
   const deleteTodo = (id) => {
     setTodos((prev) => {
@@ -30,7 +32,6 @@ const Todo = () => {
   };
 
   const addTodo = () => {
-    setTodoItemCounter((prev) => prev + 1);
     setTodos((prev) => {
       const newtodos = prev.map((todo) => ({ ...todo }));
       const newTodo = {
@@ -43,22 +44,13 @@ const Todo = () => {
     });
 
     setTodoInput("");
+    setTodoItemCounter((prev) => prev + 1);
   };
 
   return (
     <>
-      {todos.map((todo) => (
-        <div key={todo.id}>
-          <button onClick={() => deleteTodo(todo.id)}>完了</button>
-          {todo.content}
-        </div>
-      ))}
-      <input
-        type="text"
-        value={todoInput}
-        onChange={(e) => setTodoInput(e.target.value)}
-      />
-      <button onClick={addTodo}>追加</button>
+      <List todos={todos} deleteTodo={deleteTodo} />
+      <Form todoInputState={[todoInput, setTodoInput]} addTodo={addTodo} />
     </>
   );
 };

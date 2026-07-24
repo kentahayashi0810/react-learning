@@ -9,6 +9,10 @@
 
 ---
 
+### 7/24
+
+-refactoring
+
 ### 7/23
 
 - todo app challenge, needs refactoring
