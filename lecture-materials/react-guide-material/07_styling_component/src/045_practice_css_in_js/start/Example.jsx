@@ -7,12 +7,22 @@ const FirstButton = styled.button`
   margin: 0.5rem 1rem;
   width: 11rem;
   border: none;
+  background-color: pink;
+`;
+
+const SecondButton = styled(FirstButton)`
+  background-color: red;
+  color: white;
+`;
+
+const ThirdButton = styled(SecondButton)`
+  background-color: ${({ dark }) => (dark ? "black" : "green")};
 `;
 
 const Example = () => {
   return (
     <>
-      <h3>練習問題</h3>
+      <h2>練習問題</h2>
       <p>
         記述を変更し、完成コードと同じ状態になるようにしてください。
         <ul>
@@ -28,6 +38,9 @@ const Example = () => {
         </ul>
       </p>
       <FirstButton>ボタン1</FirstButton>
+      <SecondButton>ボタン2</SecondButton>
+      <ThirdButton dark={false}>ボタン3</ThirdButton>
+      <ThirdButton dark={true}>ボタン3</ThirdButton>
     </>
   );
 };
