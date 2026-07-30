@@ -39,8 +39,8 @@ const Example = () => {
       </p>
       <FirstButton>ボタン1</FirstButton>
       <SecondButton>ボタン2</SecondButton>
-      <ThirdButton dark={false}>ボタン3</ThirdButton>
-      <ThirdButton dark={true}>ボタン3</ThirdButton>
+      <ThirdButton>ボタン3</ThirdButton>
+      <ThirdButton dark>ボタン3</ThirdButton>
     </>
   );
 };
