@@ -9,6 +9,10 @@
 
 ---
 
+### 8/2
+
+- React DOM, createPortal, Bubbling in React DOM
+
 ### 7/30
 
 - Chakra UI,
