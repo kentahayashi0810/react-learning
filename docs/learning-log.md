@@ -9,6 +9,19 @@
 
 ---
 
+### 8/15
+
+- Difference between Procedual Programming and Functional programming
+- functional programming rules: no referring to a value outside of the function, args can always expect the same return value
+
+### 8/13
+
+- useImperativeHandle
+
+### 8/7
+
+- ForwardRef
+
 ### 8/6
 
 - UseRef
