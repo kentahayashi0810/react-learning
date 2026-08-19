@@ -9,6 +9,14 @@
 
 ---
 
+### 8/19
+
+- immutability
+
+### 8/18
+
+- pure functions in react
+
 ### 8/15
 
 - Difference between Procedual Programming and Functional programming
