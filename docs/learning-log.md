@@ -9,6 +9,10 @@
 
 ---
 
+### 8/20
+
+- reducer
+
 ### 8/19
 
 - immutability
