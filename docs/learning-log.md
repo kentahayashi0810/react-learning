@@ -9,6 +9,10 @@
 
 ---
 
+### 8/29
+
+- reducer practice
+
 ### 8/20
 
 - reducer

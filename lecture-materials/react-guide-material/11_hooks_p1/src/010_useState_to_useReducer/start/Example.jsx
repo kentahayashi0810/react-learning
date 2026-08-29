@@ -13,11 +13,6 @@ const Example = () => {
       default:
         throw new Error("不明なtypeです");
     }
-    if (type === "+") {
-      return prev + step;
-    } else if (type === "-") {
-      return prev - step;
-    }
   }, 0);
   const rcountUp = () => {
     dispatch({ type: "+", step: 2 });
