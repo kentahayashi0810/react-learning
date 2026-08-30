@@ -9,6 +9,11 @@
 
 ---
 
+### 8/30
+
+- useContext
+- performance: when you update state through context, not only the components that are subsrcibed to the state, but also the components that only need the state update functions get re rendered, which is unnecessary and lowered the performance. To tackle this, you can make separate context provider just for updating function. This way, even when the context state gets updated, the components that only read the update function dont get re rendered.
+
 ### 8/29
 
 - reducer practice
