@@ -9,6 +9,11 @@
 
 ---
 
+### 8/31
+
+- refactored useReducer code by using useContext.
+-
+
 ### 8/30
 
 - useContext
@@ -93,7 +98,7 @@
 
 ### 7/15
 
--deep about JSX, events
+- deep about JSX, events
 
 ### 7/9
 
