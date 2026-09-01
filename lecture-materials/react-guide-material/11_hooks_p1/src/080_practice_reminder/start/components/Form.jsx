@@ -1,5 +1,8 @@
 import { useState } from "react";
-const Form = ({ createTodo }) => {
+import { useTodoDispatch } from "../context/TodoContext";
+const Form = () => {
+  const dispatch = useTodoDispatch();
+
   const [enteredTodo, setEnteredTodo] = useState("");
 
   const addTodo = (e) => {
@@ -11,7 +14,7 @@ const Form = ({ createTodo }) => {
       editing: false,
     };
 
-    createTodo(newTodo);
+    dispatch({ type: "CREATE", payload: newTodo });
 
     setEnteredTodo("");
   };

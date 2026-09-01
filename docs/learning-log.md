@@ -9,6 +9,10 @@
 
 ---
 
+### 9/1
+
+- Furthur practice useContext, still need to fix some bugs
+
 ### 8/31
 
 - refactored useReducer code by using useContext.
