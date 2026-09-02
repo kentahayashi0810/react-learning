@@ -1,39 +1,34 @@
 import { createContext, useContext, useReducer } from "react";
 
-const reducer = (state, { type, payload, id, content }) => {
+const reducer = (todos, { type, payload }) => {
   switch (type) {
-    case "CREATE":
-      return [...state, payload];
+    case "CREATE": {
+      return [...todos, payload];
+    }
 
-    case "DELETE":
-      const newTodos = state.filter((todo) => {
-        return todo.id !== id;
+    case "DELETE": {
+      const newTodos = todos.filter((todo) => {
+        return todo.id !== payload;
       });
 
       return newTodos;
+    }
 
-    case "UPDATE":
-      const target = state.find((todo) => {
-        return todo.id === id;
-      });
+    case "UPDATE": {
+      const newTodos = todos.map((todo) =>
+        todo.id === payload.id ? { ...todo, content: payload.content } : todo,
+      );
 
-      const rest = state.filter((todo) => {
-        return todo.id !== id;
-      });
+      return newTodos;
+    }
 
-      return [...rest, { ...target, content }];
+    case "UPDATE_EDIT_STATE": {
+      const newTodos = todos.map((todo) =>
+        todo.id === payload.id ? { ...todo, editing: payload.editing } : todo,
+      );
 
-    case "TOGGLE-EDIT":
-      const targetTodo = state.find((todo) => {
-        return todo.id === id;
-      });
-
-      const restTodos = state.filter((todo) => {
-        return todo.id !== id;
-      });
-
-      return [...restTodos, { ...targetTodo, editing: !targetTodo.editing }];
-
+      return newTodos;
+    }
     default:
       break;
   }

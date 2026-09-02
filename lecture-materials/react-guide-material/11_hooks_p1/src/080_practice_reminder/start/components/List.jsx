@@ -5,13 +5,16 @@ const List = () => {
   const todos = useTodo();
 
   const complete = (id) => {
-    dispatch({ type: "DELETE", id });
+    dispatch({ type: "DELETE", payload: id });
   };
-  const toggleEdit = (id) => {
-    dispatch({ type: "TOGGLE-EDIT", id });
+  const updateEditingState = (id, editing) => {
+    dispatch({ type: "UPDATE_EDIT_STATE", payload: { id, editing } });
   };
-  const updateTodoContent = (content) => {
-    dispatch({ type: "UPDATE", content });
+  const startEditing = (id) => updateEditingState(id, true);
+  const finishEditing = (id) => updateEditingState(id, false);
+
+  const updateTodoContent = (id, content) => {
+    dispatch({ type: "UPDATE", payload: { id, content } });
   };
 
   console.log(todos);
@@ -26,10 +29,15 @@ const List = () => {
               <input
                 type="text"
                 value={todo.content}
-                onChange={(e) => updateTodoContent(e.target.value)}
+                onChange={(e) => updateTodoContent(todo.id, e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    finishEditing(todo.id);
+                  }
+                }}
               />
             ) : (
-              <span onDoubleClick={() => toggleEdit(todo.id)}>
+              <span onDoubleClick={() => startEditing(todo.id)}>
                 {todo.content}
               </span>
             )}
