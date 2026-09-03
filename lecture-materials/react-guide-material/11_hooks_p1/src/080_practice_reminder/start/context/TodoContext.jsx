@@ -8,27 +8,18 @@ const reducer = (todos, { type, payload }) => {
 
     case "DELETE": {
       const newTodos = todos.filter((todo) => {
-        return todo.id !== payload;
+        return todo.id !== payload.id;
       });
-
       return newTodos;
     }
 
     case "UPDATE": {
       const newTodos = todos.map((todo) =>
-        todo.id === payload.id ? { ...todo, content: payload.content } : todo,
+        todo.id === payload.id ? payload : todo,
       );
-
       return newTodos;
     }
 
-    case "UPDATE_EDIT_STATE": {
-      const newTodos = todos.map((todo) =>
-        todo.id === payload.id ? { ...todo, editing: payload.editing } : todo,
-      );
-
-      return newTodos;
-    }
     default:
       break;
   }
