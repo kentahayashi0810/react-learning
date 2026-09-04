@@ -9,6 +9,10 @@
 
 ---
 
+### 9/4
+
+- learned about useeffect
+
 ### 9/1
 
 - Furthur practice useContext, still need to fix some bugs
