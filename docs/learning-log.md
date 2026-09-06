@@ -9,6 +9,16 @@
 
 ---
 
+### 9/6
+
+- useLayoutEffect
+- customHooks
+- - **Side effects:** In React, it is crucial to keep component functions pure. Rendering should be kept separate from side effects such as API calls, DOM manipulation, and local storage updates. Side effects should be handled outside the rendering process, typically using `useEffect`.
+
+### 9/5
+
+- useEffect, cleanUp, dependency array
+
 ### 9/4
 
 - learned about useeffect
