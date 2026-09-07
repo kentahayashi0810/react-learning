@@ -9,6 +9,10 @@
 
 ---
 
+### 9/7
+
+- redux
+
 ### 9/6
 
 - useLayoutEffect
