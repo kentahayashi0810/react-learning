@@ -9,9 +9,15 @@
 
 ---
 
+### 9/8
+
+- redux toolkit
+- within the toolkit, it is allowed to change immutable value, thanks to immer
+
 ### 9/7
 
 - redux
+- action creator
 
 ### 9/6
 
