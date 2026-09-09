@@ -9,6 +9,14 @@
 
 ---
 
+### 9/9
+
+- immer
+- redux thunk(middleware)
+- Redux Thunk allows us to dispatch a function instead of an action.
+- The function can perform additional processing, such as an API call, and then dispatch an action when the processing is finished.
+- A thunk does not have to call `dispatch`, but it is often used to dispatch an action after an asynchronous operation.
+
 ### 9/8
 
 - redux toolkit
