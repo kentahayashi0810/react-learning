@@ -9,6 +9,10 @@
 
 ---
 
+### 9/11
+
+- createAsyncThunk, how to make asynchronous functions with redux toolkit
+
 ### 9/9
 
 - immer
